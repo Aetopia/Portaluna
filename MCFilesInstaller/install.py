@@ -3,7 +3,7 @@ import os
 max_value = [0]
 
 def install(Version):
-    if Version == "1.7.10" or Version == "1.8.9" or Version == "1.12.2" or Version == "1.16.5" or Version == "1.17.1" or Version == "1.18":
+    if Version == "1.7.10" or Version == "1.8.9" or Version == "1.12.2" or Version == "1.16.5" or Version == "1.17.1" or Version == "1.18.1":
         pass
     else:
         while True:
