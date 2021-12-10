@@ -1,5 +1,5 @@
 # Lunar Client Portable
-A portable version of Lunar Client.      
+A portable launcher for Lunar Client.      
 Made using Python, PowerShell and AHK!      
 
 Preview:    
