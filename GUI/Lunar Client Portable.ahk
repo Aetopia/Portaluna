@@ -54,6 +54,7 @@ Launch(){
 }	
 
 Install_Update(){
+	VersionSelect()
 	IniRead, Selected_Version, LauncherConfig.ini, Main, Version
 	RunWait, mcfilesinstaller.exe -i %AssetIndex%
 	RunWait, powershell.exe ./lcfilesinstaller.ps1 %Selected_Version%
