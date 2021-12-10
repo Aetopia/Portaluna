@@ -27,8 +27,8 @@ Gui, Font, s8
 Gui, Tab, 2
 Gui, Add, Text,, Edit LC Portable's Config File.
 Gui, Add, Button, h25 w75 vEdit gEdit, Edit
-Gui, Add, Text,, Update LC Portable's Dependencies.
-Gui, Add, Button, h25 w75 vDependencies_Update gDependencies_Update, Update 
+Gui, Add, Text,, Reset LC Portable.
+Gui, Add, Button, h25 w75 vReset gReset, Reset 
 Gui, Tab,3
 Gui, Add, Text,, Lunar Client Portable made by Aetopia.
 Gui, Add, Link,, GitHub Repository: <a href="https://github.com/Aetopia/Lunar-Client-Portable">https://github.com/Aetopia/Lunar-Client-Portable</a>
@@ -40,12 +40,11 @@ Edit(){
 	Run, Options.ini
 }
 
-Dependencies_Update(){
-	URLDownloadToFile, https://github.com/Aetopia/Lunar-Client-Portable/releases/download/latest/MCFilesInstaller.exe, MCFilesInstaller.exe
-	URLDownloadToFile, https://github.com/Aetopia/Lunar-Client-Portable/releases/download/latest/Launch.exe, Launch.exe
-	URLDownloadToFile, https://raw.githubusercontent.com/Aetopia/Lunar-Client-Portable/main/LCFilesInstaller.ps1, LCFilesInstaller.ps1
-	MsgBox, 64, Updated, Dependencies Updated.
-}
+Reset(){
+	FileDelete, LauncherConfig.ini
+	FileDelete, Options.ini
+	Reload
+}	
 
 Launch(){
 	IniRead, Selected_Version, LauncherConfig.ini, Main, Version
