@@ -1,4 +1,4 @@
-﻿;File Description
+;File Description
 ;@Ahk2Exe-SetName Lunar Client Portable
 ;@Ahk2Exe-SetDescription Lunar Client Portable
 ;@Ahk2Exe-SetVersion 1.0.0
@@ -95,7 +95,7 @@ VersionSelect(){
     Else If (Selected_Version = 1.18) 
 	{
 		GuiControl, Choose, VersionList, 6
-		global AssetIndex="1.18"
+		global AssetIndex="1.18.1"
 	}
 	return
 }
@@ -107,4 +107,4 @@ Files(){
 
 GuiClose(){
 	ExitApp
-}	
+}
