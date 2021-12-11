@@ -4,7 +4,7 @@ An alternative launcher for Lunar Client which is aimed at portability and funct
 ### Features
 1. Portable.
 2. Lightweight.
-3. Aimed at Functionality.
+3. Functional.
 
 **Note: Cosmetics are disabled with Lunar Client Mini.**      
 Made using Python, PowerShell and AHK!  
