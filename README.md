@@ -1,5 +1,5 @@
 # Lunar Client Mini
-A portable launcher for Lunar Client.      
+An alternative launcher for Lunar Client which is aimed at portability and functionality.             
 Made using Python, PowerShell and AHK!      
 
 ## Dependencies
