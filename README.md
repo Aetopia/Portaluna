@@ -6,7 +6,11 @@ An alternative launcher for Lunar Client which is aimed at portability and funct
 2. Lightweight.
 3. Aimed at Functionality.
 
-Made using Python, PowerShell and AHK!      
+Made using Python, PowerShell and AHK!    
+
+## Preview
+![image](https://user-images.githubusercontent.com/41850963/145679957-e35ca6da-903a-4785-869b-5d1eb4325426.png)
+
 
 ## Dependencies
 Using Python `3.9`:
