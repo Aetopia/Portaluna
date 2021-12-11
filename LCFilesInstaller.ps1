@@ -1,4 +1,4 @@
-﻿$WarningPreference = 'SilentlyContinue'
+$WarningPreference = 'SilentlyContinue'
 $VersionFile = iwr -Uri "https://launcherupdates.lunarclientcdn.com/latest.yml" -OutFile "$env:Temp\Version.txt"
 $Version = cat "$env:Temp\Version.txt" | Select-Object -First 1
 $Version = $Version.Trim("version: ")
