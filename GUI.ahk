@@ -1,6 +1,6 @@
-﻿;File Description
-;@Ahk2Exe-SetName Lunar Client Mini
-;@Ahk2Exe-SetDescription Lunar Client Mini
+;File Description
+;@Ahk2Exe-SetName Portaluna
+;@Ahk2Exe-SetDescription Portaluna
 ;@Ahk2Exe-SetVersion 1.0.0
 
 #NoEnv
@@ -25,15 +25,15 @@ Gui, Font, s9
 Gui, Add, Button, w96 h23 x255 y179 vInstall_Update gInstall_Update, Install/Update
 Gui, Font, s8
 Gui, Tab, 2
-Gui, Add, Text,, Edit Lunar Client Mini's Config File.
+Gui, Add, Text,, Edit Portaluna's Config File.
 Gui, Add, Button, h25 w75 vEdit gEdit, Edit
-Gui, Add, Text,, Reset Lunar Client Mini.
+Gui, Add, Text,, Reset Portaluna.
 Gui, Add, Button, h25 w75 vReset gReset, Reset 
 Gui, Tab,3
-Gui, Add, Text,, Lunar Client Mini made by Aetopia.
-Gui, Add, Link,, GitHub Repository: <a href="https://github.com/Aetopia/Lunar-Client-Portable">https://github.com/Aetopia/Lunar-Client-Mini</a>
+Gui, Add, Text,, Portaluna made by Aetopia.
+Gui, Add, Link,, GitHub Repository: <a href="https://github.com/Aetopia/Portaluna">https://github.com/Aetopia/Portaluna</a>
 Gui, Add, Link,, Join CTT: <a href="https://discord.gg/CTT">https://discord.gg/CTT</a>
-Gui, Show, w500 h400, Lunar Client Mini
+Gui, Show, w500 h400, Portaluna
 
 Edit(){
 	RunWait, execute.exe,, Hide
