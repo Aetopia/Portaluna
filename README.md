@@ -1,4 +1,4 @@
-# Lunar Client Mini
+# Portaluna
 An alternative launcher for Lunar Client which is aimed at portability and functionality.   
 
 ### Features
@@ -6,12 +6,13 @@ An alternative launcher for Lunar Client which is aimed at portability and funct
 2. Lightweight.
 3. Functional.
 
-**Note: Cosmetics are disabled with Lunar Client Mini.**      
+**Note: Cosmetics are disabled with Portaluna.**      
 Made using Python, PowerShell and AHK!  
 
 
 ## Preview
-![image](https://user-images.githubusercontent.com/41850963/145679957-e35ca6da-903a-4785-869b-5d1eb4325426.png)
+![image](https://user-images.githubusercontent.com/41850963/146210842-8cc1a55c-dadb-40cd-94c0-c82a38678e76.png)
+
 
 
 ## Dependencies
