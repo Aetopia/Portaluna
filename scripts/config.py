@@ -16,17 +16,20 @@ def ConfigExist():
         
 # Create a "Options.ini" file.    
 def ConfigCreate():
-    config = configparser.ConfigParser()
-    config['Java'] = {'Arguments': "-Xms3G -Xmx3G -Xmn1G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M",
-                      '1.7 Java': JRE,
-                      '1.8 Java': JRE,
-                      '1.12 Java': JRE,
-                      '1.16 Java': JRE,
-                      '1.17 Java': JRE,
-                      '1.18 Java': JRE,
-                      }
-    with open('Options.ini', 'w') as configfile:
-        config.write(configfile)
+    try:
+        config = configparser.ConfigParser()
+        config['Java'] = {'Arguments': "-Xms3G -Xmx3G -Xmn1G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M",
+                          '1.7 Java': JRE,
+                          '1.8 Java': JRE,
+                          '1.12 Java': JRE,
+                          '1.16 Java': JRE,
+                          '1.17 Java': JRE,
+                          '1.18 Java': JRE,
+                          }
+        with open('Options.ini', 'w') as configfile:
+            config.write(configfile)
+    except:
+        pass
         
 # Read Values from "Options.ini".       
 def ConfigRead(Version):
