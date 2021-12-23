@@ -1,9 +1,10 @@
 # Modules
 import os
 import configparser
+import glob
 
 #Variables
-
+JRE=str(glob.glob(".lunarclient_files\\jre\\zulu*\\bin\\javaw.exe")[0])
 
 # Check if "Options.ini" exists or not.
 def ConfigExist():
@@ -14,12 +15,12 @@ def ConfigExist():
 def ConfigCreate():
     config = configparser.ConfigParser()
     config['Java'] = {'Arguments': "-Xms3G -Xmx3G -Xmn1G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M",
-                      '1.7 Java': ".lunarclient_files\\jre\\zulu17.30.15-ca-fx-jre17.0.1-win_x64\\bin\\javaw.exe",
-                      '1.8 Java': ".lunarclient_files\\jre\\zulu17.30.15-ca-fx-jre17.0.1-win_x64\\bin\\javaw.exe",
-                      '1.12 Java': ".lunarclient_files\\jre\\zulu17.30.15-ca-fx-jre17.0.1-win_x64\\bin\\javaw.exe",
-                      '1.16 Java': ".lunarclient_files\\jre\\zulu17.30.15-ca-fx-jre17.0.1-win_x64\\bin\\javaw.exe",
-                      '1.17 Java': ".lunarclient_files\\jre\\zulu17.30.15-ca-fx-jre17.0.1-win_x64\\bin\\javaw.exe",
-                      '1.18 Java': ".lunarclient_files\\jre\\zulu17.30.15-ca-fx-jre17.0.1-win_x64\\bin\\javaw.exe",
+                      '1.7 Java': JRE,
+                      '1.8 Java': JRE,
+                      '1.12 Java': JRE,
+                      '1.16 Java': JRE,
+                      '1.17 Java': JRE,
+                      '1.18 Java': JRE,
                       }
     with open('Options.ini', 'w') as configfile:
         config.write(configfile)
