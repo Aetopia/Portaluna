@@ -4,7 +4,10 @@ import configparser
 import glob
 
 #Variables
-JRE=str(glob.glob(".lunarclient_files\\jre\\zulu*\\bin\\javaw.exe")[0])
+try:
+    JRE=str(glob.glob(".lunarclient_files\\jre\\zulu*\\bin\\javaw.exe")[0])
+except:
+    pass
 
 # Check if "Options.ini" exists or not.
 def ConfigExist():
