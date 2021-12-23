@@ -43,9 +43,9 @@ Write-Output "Getting OptiFine..."
 curl.exe -# -L -o ".lunarclient_files\offline\$GameVersion\OptiFine.jar" $Files[7].url
 
 if (!(Test-Path -LiteralPath ".lunarclient_files\jre\$JRE_Name")){
+Remove-Item -Path ".lunarclient_files\jre" -Force -Recurse | Out-Null
 Write-Output "Downloading JRE..."
 $null = New-Item -Path ".lunarclient_files\jre\$JRE_Name" -Type "Directory"
 curl.exe -# -L -o "$env:Temp\$JRE_Name.zip" $JRE
 Expand-Archive -Path "$env:Temp\$JRE_Name.zip" -DestinationPath ".lunarclient_files\jre" -Force
 }
-
