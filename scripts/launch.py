@@ -3,11 +3,11 @@ import subprocess
 import os
 import config
 
-Natives=os.getcwd()+"\\.lunarclient_files\\offline\\1.8\\natives"
 
 def Launch(Version):
     # Read Values from Options.ini
     Config=config.ConfigRead(Version)
+    Natives=os.getcwd()+"\\.lunarclient_files\\offline\\"+Version+"\\natives"
     # Set the Asset Index
     if Version=="1.7":
         AssetIndex="1.7.10"
