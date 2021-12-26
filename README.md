@@ -1,4 +1,5 @@
 # Portaluna
+**Note: It seems Lunar has changed how they receive JSON responses and preventing LC Assets from being downloaded via the PowerShell Script.**
 An alternative launcher for Lunar Client which is aimed at portability and functionality.   
 
 ### Features
