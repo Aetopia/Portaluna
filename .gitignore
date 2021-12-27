@@ -1,0 +1,8 @@
+GUI.exe
+LauncherConfig.ini
+Options.ini
+logs/
+.minecraft/
+.minecraft_files/
+.lunarclient_files/
+scripts/__pycache__/
