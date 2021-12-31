@@ -7,6 +7,8 @@ An alternative launcher for Lunar Client which is aimed at portability and funct
 2. Lightweight.
 3. Functional.
 
+Portaluna is also moddable! You can easily edit the Python Scripts, Portaluna utilizes for its functionality!
+
 **Note: Cosmetics are disabled with Portaluna.**      
 Made using Python, PowerShell and AHK!  
 
