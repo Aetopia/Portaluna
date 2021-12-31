@@ -5,7 +5,7 @@ import glob
 
 #Variables
 try:
-    JRE=str(glob.glob(".lunarclient_files\\jre\\zulu*\\bin\\javaw.exe")[0])
+    JRE=str(glob.glob(".portaluna/jre/zulu*/bin/javaw.exe")[0])
 except:
     pass
 
@@ -63,4 +63,4 @@ def ConfigRead(Version):
         Java_Path=config['Java']["1.18 Java"]
 
     # Return Values
-    return [Java_Path, Arguments_List]
+    return (Java_Path, Arguments_List)
