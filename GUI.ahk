@@ -1,7 +1,7 @@
 ;File Description
 ;@Ahk2Exe-SetName Portaluna
 ;@Ahk2Exe-SetDescription Portaluna
-;@Ahk2Exe-SetVersion 1.0.0
+;@Ahk2Exe-SetVersion 2.0.0
 
 #NoEnv
 SetBatchLines -1
@@ -37,7 +37,12 @@ Gui, Show, w500 h400, Portaluna
 
 Edit(){
 	RunWait, execute.exe,, Hide
-	Run, Options.ini
+	Try {
+		Run, Options.ini
+	}
+	Catch {
+		MsgBox, 16, Error, Default JRE not Installed., 1
+	}	
 }
 
 Reset(){
@@ -56,7 +61,7 @@ Install_Update(){
 	VersionSelect()
 	IniRead, Selected_Version, LauncherConfig.ini, Main, Version
 	RunWait, execute.exe -i %AssetIndex%
-	MsgBox, 64, Finished!, LC %Selected_Version% Installed/Updated.
+	MsgBox, 64, Finished!, LC %Selected_Version% Installed/Updated., 1
 }	
 
 VersionWrite(){
@@ -69,32 +74,32 @@ VersionSelect(){
 	If (Selected_Version = 1.7) 
 	{
 		GuiControl, Choose, VersionList, 1
-		global AssetIndex="1.7.10"
+		global AssetIndex="1.7"
 	}	
 	Else If (Selected_Version = 1.8) 
 	{
 		GuiControl, Choose, VersionList, 2
-		global AssetIndex="1.8.9"
+		global AssetIndex="1.8"
 	}
 	Else If (Selected_Version = 1.12) 
 	{
 		GuiControl, Choose, VersionList, 3
-		global AssetIndex="1.12.2"
+		global AssetIndex="1.12"
 	}
 	Else If (Selected_Version = 1.16) 
 	{
 		GuiControl, Choose, VersionList, 4
-		global AssetIndex="1.16.5"
+		global AssetIndex="1.16"
 	}
 	Else If (Selected_Version = 1.17) 
 	{
 		GuiControl, Choose, VersionList, 5
-		global AssetIndex="1.17.1"
+		global AssetIndex="1.17"
 	}
     Else If (Selected_Version = 1.18) 
 	{
 		GuiControl, Choose, VersionList, 6
-		global AssetIndex="1.18.1"
+		global AssetIndex="1.18"
 	}
 	return
 }
