@@ -6,15 +6,19 @@ import launch
 import config
 import minecraft_launcher_lib
 config.ConfigExist()
-parser=argparse.ArgumentParser()
+parser=argparse.ArgumentParser(add_help = False)
 parser.add_argument('-i', 
                     nargs=1, 
-                    action="store")
+                    action="store",
+                    metavar=("Version"))
 parser.add_argument('-v', 
                     nargs=1, 
-                    action="store")
+                    action="store",
+                    metavar=("Version"))
 args=parser.parse_args()
 if args.i is not None:
     install.Install(args.i[0])
 elif args.v is not None:
-    launch.Launch(args.v[0])    
+    launch.Launch(args.v[0])
+else:
+    pass
