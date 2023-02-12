@@ -1,4 +1,5 @@
 # Portaluna
+**Note: This is a deprecated project!**
 
 An alternative launcher for Lunar Client which is aimed at portability and functionality.   
 
